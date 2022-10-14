@@ -1,0 +1,59 @@
+/* regular */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opnetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* Demi */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opnetype");
+  font-style: normal;
+  font-weight: 600;
+}
+/* bold */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opnetype");
+  font-style: normal;
+  font-weight: 700;
+}
+/* primary text color dark & background color */
+/* seconary text & inacitive CTA */
+/* Primary color light & active CTA */
+/* media query for mobile */
+/* media query for tablet */
+/* media query for high pixel density devices */
+/* styles for header for mobile */
+.headbanner {
+  background-color: #323232;
+  text-align: center;
+}
+
+.headbanner__logo {
+  color: white;
+  text-decoration: none;
+  font-size: 1 rem;
+}
+
+.headbanner__container {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: "Avenir";
+  line-height: 1.8rem;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}/*# sourceMappingURL=bio.css.map */

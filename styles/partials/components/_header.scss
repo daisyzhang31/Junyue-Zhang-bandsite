@@ -1,0 +1,22 @@
+@use "../colors" as *;
+@use "../breakpoints" as breakpoints;
+
+/* styles for header for mobile */
+
+.headbanner {
+  background-color: $bandsite-black;
+  text-align: center;
+  padding: 2%, 0;
+}
+
+.headbanner__logo {
+  color: $white;
+  text-decoration: none;
+  font-size: 1 rem;
+}
+
+.headbanner__container {
+  display: flex;
+  justify-content: space-evenly;
+  color: $white;
+}

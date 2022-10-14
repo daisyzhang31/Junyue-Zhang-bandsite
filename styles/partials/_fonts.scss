@@ -1,0 +1,23 @@
+/* regular */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Regular.otf") format("opnetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Demi */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Demi.otf") format("opnetype");
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* bold */
+@font-face {
+  font-family: "Avenir";
+  src: url("../../Assets/Font/AvenirNextLTPro-Bold.otf") format("opnetype");
+  font-style: normal;
+  font-weight: 700;
+}

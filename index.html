@@ -14,47 +14,54 @@
       <!-- headbanner -->
       <section class="headbanner">
         <a href="./index.html"
-          ><article class="headbanner__logo">BANDSITE</article></a
-        >
+          ><img
+            class="headbanner__logo"
+            src="./Assets/Logo/Logo-bandsite.svg"
+            alt=""
+        /></a>
         <div class="headbanner__container">
-          <article class="headbanner__Bio">Biography</article>
-          <article class="headbanner__show">Shows</article>
+          <article class="headbanner__text">Biography</article>
+          <article class="headbanner__text">Shows</article>
         </div>
       </section>
       <!-- hero -->
 
       <section class="hero">
-        <article class="hero__text">The Bees Knees</article>
-        <img class="hero__picture" src="./Assets/Images/hero-bio.jpg" alt="" />
+        <article class="hero__container">
+          <h1 class="hero__text">The Bees Knees</h1>
+        </article>
       </section>
     </header>
     <!-- Header Component -->
 
     <!-- main content -->
-    <main class="Main-content">
-      <section class="Main__musican">
-        <h1 class="Main__musican-title">About the Musicians</h1>
+    <main class="main">
+      <section class="musician">
+        <h1 class="musician__title">About the Musicians</h1>
         <img
-          class="Main__muscian-picture"
+          class="musician__picture"
           src="./Assets/Images/band.jpg"
           alt=""
         />
-        <p>
+        <p class="musician__text">
           “We push each other to be the best. It’s not uncommon for one of us to
           say ‘this needs to be better, back to the drawing board’” - Bryan
           Teddy, lead vocalist of The Bees Knees
         </p>
 
-        <h3 class="Main__musican-subtitle">The Bees Knees</h3>
-        <p class="Main__musican-text">
+        <h3 class="musician__subtitle">The Bees Knees</h3>
+        <p class="musician__subtext">
           The Bees Knees is a pop rock band originating from San Francisco,
           California. The band consists of lead vocalist Bryan Teddy, guitarist
-          Mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer
+          mack Tolkens, guitarist Andrew Green, bassist Kent Zulkee and drummer
           Freddie Fischer. The band achieved its first commercial success as an
           unsigned act, drawing attention from manager Cam Adams. Having worked
           with other popular acts (The Elephant In The Room, One Trick Pony, The
-          Cat’s Meow), Adams was confident the band could succeed even further,
-          pushing them to sign with Magenta Records. From there, the band has
+          Cat’s meow), Adams was confident the band could succeed even further,
+          pushing them to sign with magenta Records.
+        </p>
+        <p class="musician__subtext"> 
+          From there, the band has
           soared, gaining international recognition and ranking in the top 10 on
           the Poster Charts. New fans immediately fell in love with the band’s
           original and organic attitude, solidifying their place as one of the
@@ -62,13 +69,14 @@
           affectionately refer to themselves as “The Hive” and are drawn to
           their candid and authentic performances on stage. Looking forward to
           touring in the future, The Bees Knees are currently recording their
-          second studio album, looking to be released in late 2021.
-        </p>
+          second studio album, looking to be released in late 2021.</p>
       </section>
 
-      <section class="Main__photogallery">
-        <h1>Photo Gallery</h1>
-        <img
+      <section class="photogallery">
+ <h1 class="photogallery__title">Photo Gallery</h1>
+       
+ <div class="photogallery__container">
+  <img
           class="photogallery__picture"
           src="./Assets/Images/Photo-gallery-1.jpg"
           alt=""
@@ -113,6 +121,8 @@
           src="./Assets/Images/Photo-gallery-9.jpg"
           alt=""
         />
+       
+ </div>
       </section>
     </main>
 
@@ -121,21 +131,21 @@
     <footer class="footer">
       <h1 class="footer__title">Get in Touch</h1>
       <div class="footer__Social">
-        <img src="./Assets/Icons/SVG/Icon-instagram.svg" alt="" />
-        <img src="./Assets/Icons/SVG/Icon-facebook.svg" alt="" />
-        <img src="./Assets/Icons/SVG/Icon-twitter.svg" alt="" />
+        <img class="footer__Social-image" src="./Assets/Icons/SVG/Icon-instagram.svg" alt="" />
+        <img class="footer__Social-image" src="./Assets/Icons/SVG/Icon-facebook.svg" alt="" />
+        <img class="footer__Social-image" src="./Assets/Icons/SVG/Icon-twitter.svg" alt="" />
       </div>
 
       <div class="footer__contacts">
         <div class="footer__contacts-infor">
           <p class="footer__contacts-infor-name">
-            Cam Adams <br />The Bees Knees Management
+            Cam Adams <br />The Bees Knees management
           </p>
-          <p class="footer__contacts-infor-address">
+          <p class="footer__contacts-infor-detail">
             503 Broadway Penthouse, <br />
             NewYork, NY 10012, USA
           </p>
-          <p class="footer__contacts-infor-email">info@thebeesknees.com</p>
+          <p class="footer__contacts-infor-detail">info@thebeesknees.com</p>
         </div>
 
         <div class="footer__contacts-infor">
@@ -143,11 +153,11 @@
             Pearl Gregg <br />
             Limitless Artist Group
           </p>
-          <p class="footer__contacts-infor-address">
+          <p class="footer__contacts-infor-detail">
             Booking Agent for <br />
             US / South America / Japan
           </p>
-          <p class="footer__contacts-infor-email">
+          <p class="footer__contacts-infor-detail">
             pearl.gregg@limitlessag.com
           </p>
         </div>
@@ -156,18 +166,19 @@
           <p class="footer__contacts-infor-name">
             Carson Whyte <br />ARCH Entertainment
           </p>
-          <p class="footer__contacts-infor-address">
+          <p class="footer__contacts-infor-detail">
             Booking Agent for <br />
             UK / EU / AU
           </p>
-          <p class="footer__contacts-infor-email">
+          <p class="footer__contacts-infor-detail">
             cwhyte@archentertainment.com
           </p>
         </div>
       </div>
+<br>
 
       <div class="footer__end">
-        <h1 class="footer__end-title">BANDSITE</h1>
+        <img class="footer__end-image" src="./Assets/Logo/Logo-bandsite.svg" alt="">
         <p class="footer__end-text">
           Copyright The Bees Knees © 2021 All Rights Reserved
         </p>

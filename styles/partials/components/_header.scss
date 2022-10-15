@@ -3,20 +3,90 @@
 
 /* styles for header for mobile */
 
+/* haedbanner */
+
 .headbanner {
   background-color: $bandsite-black;
   text-align: center;
-  padding: 2%, 0;
+  padding: 3% 0;
+
+
+&__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
 }
 
-.headbanner__logo {
-  color: $white;
-  text-decoration: none;
-  font-size: 1 rem;
-}
-
-.headbanner__container {
+&__container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   color: $white;
+  padding: 0 4%;
 }
+
+&__text {
+  color: $silver;
+}
+
+&__text:hover {
+  color: $white;
+  font-weight: 600;
+  border-bottom: 0.1875rem solid $white;
+}
+}
+
+/* hero */
+
+.hero {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.5),
+      rgba(50, 50, 50, 0.5)
+    ),
+    url(../../../Assets/Images/hero-bio.jpg);
+    background-position:center;
+    background-size: cover;
+    height:30vh;
+
+
+&__text {
+  font-size: 1.5rem;
+  color: $white;
+  font-weight: 700;
+  padding: 1rem;
+}}
+
+/* styles for header on tablet device */
+
+// @include breakpoints.medium{
+//   .headbanner {
+//   background-color: $bandsite-black;
+//   display: flex;
+
+//   padding: 1rem 2.25rem;
+
+
+// &__logo {
+//   max-width: 7.5rem;
+//   max-height: 1.25rem;
+// }
+
+// &__container {
+//   display: flex;
+//   justify-content: space-around;
+//   color: $white;
+//   padding: 0 4%;
+// }
+
+// &__text {
+//   color: $silver;
+// }
+
+// &__text:hover {
+//   color: $white;
+//   font-weight: 600;
+//   border-bottom: 0.1875rem solid $white;
+// }
+// }
+// }

@@ -1,0 +1,54 @@
+/* general mixin*/ 
+
+@mixin flexcolumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* mobile */
+
+@mixin sectionheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+}
+
+@mixin subheader {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+}
+
+@mixin bodycopy {
+     font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+/* tablet&desktop */
+
+@mixin TDectionheader {
+     font-size:2.25rem;
+    line-height:2.75rem;
+    font-weight: 700;
+}
+
+
+@mixin TDsubheader {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+}
+
+@mixin TDbodycopy {
+     font-size: .875rem;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+@mixin TDfootercopy {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    font-weight: 400; 
+}

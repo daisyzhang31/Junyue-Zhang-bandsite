@@ -1,2 +1,42 @@
 @use "../colors" as *;
-@use "../breakpoints" as *;
+@use "../breakpoints" as bkp;
+@use "../mixins" as *;
+
+/* footer part */
+
+.footer {
+  background-color: $bandsite-black;
+  padding: 1rem;
+  @include flexcolumn;
+  color: $white;
+
+  &__title {
+    @include sectionheader;
+    margin-top: 0;
+  }
+
+  &__Social {
+    text-align: left;
+  }
+
+  &__Social-image {
+    padding-right: 10%;
+  }
+
+  &__contacts {
+    @include flexcolumn;
+  }
+
+  &__contacts-infor-name {
+    @include subheader;
+  }
+
+  &__contacts-infor-detail {
+    @include bodycopy;
+  }
+
+  &__end-text {
+    @include bodycopy;
+    margin: 0 0;
+  }
+}

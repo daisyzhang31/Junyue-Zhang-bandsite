@@ -1,14 +1,19 @@
 @use "../colors" as *;
 @use "../breakpoints" as breakpoints;
+@use "../mixins" as *;
 
 /* styles for header for mobile */
 
-/* haedbanner */
+/* headbanner */
 
-.headbanner {
+@include breakpoints.small{
+
+  .headbanner {
   background-color: $bandsite-black;
-  text-align: center;
-  padding: 3% 0;
+  padding: 3% 0 0 0;
+  display: flex;
+    flex-direction: column;
+    align-items: center;
 
 
 &__logo {
@@ -18,14 +23,16 @@
 
 &__container {
   display: flex;
-  justify-content: space-around;
-  color: $white;
-  padding: 0 4%;
+  color: $silver;
+  width: 100%;
 }
 
-&__text {
-  color: $silver;
+&__text{
+  width: 50%;
+  text-align: center;
+  padding-bottom: 0.5rem;
 }
+
 
 &__text:hover {
   color: $white;
@@ -33,21 +40,14 @@
   border-bottom: 0.1875rem solid $white;
 }
 }
+}
 
 /* hero */
 
+@include breakpoints.small{
 .hero {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(
-      to bottom,
-      rgba(50, 50, 50, 0.5),
-      rgba(50, 50, 50, 0.5)
-    ),
-    url(../../../Assets/Images/hero-bio.jpg);
-    background-position:center;
-    background-size: cover;
-    height:30vh;
+ @include herobackground;
+    height:40vh;
 
 
 &__text {
@@ -55,38 +55,109 @@
   color: $white;
   font-weight: 700;
   padding: 1rem;
-}}
+}}}
 
 /* styles for header on tablet device */
 
-// @include breakpoints.medium{
-//   .headbanner {
-//   background-color: $bandsite-black;
-//   display: flex;
+/* headbanner */ 
 
-//   padding: 1rem 2.25rem;
+@include breakpoints.medium{
+
+.headbanner{
+background-color: $bandsite-black;
+display: flex;
+padding: 1.3rem 2.25rem 0 2.25rem;
+
+&__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  padding-right: 1.8rem;
+}
+
+&__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4%;
+  color: $silver;
+}
+
+&__text{
+margin-right: 2rem;
+padding-bottom: 1.3rem;
+}
+
+&__text:hover {
+  color: $white;
+  font-weight: 600;
+  border-bottom: 0.1875rem solid $white;
+}
+  }
+}
+
+/* hero */
+
+@include breakpoints.medium{
+.hero {
+  @include herobackground;
+    width: 100vw;
+    height:50vh;
 
 
-// &__logo {
-//   max-width: 7.5rem;
-//   max-height: 1.25rem;
-// }
+&__text {
+ font-size: 3.75rem;
+ font-weight: 700;
+ line-height: 4.25rem;
+  color: $white;
+  padding: 2.25rem;
+}}}
 
-// &__container {
-//   display: flex;
-//   justify-content: space-around;
-//   color: $white;
-//   padding: 0 4%;
-// }
+/* styles for header on desktop */
 
-// &__text {
-//   color: $silver;
-// }
+@include breakpoints.large{
+ .headbanner{
+background-color: $bandsite-black;
+display: flex;
+padding: 1.5rem 10vw 0 10vw;
 
-// &__text:hover {
-//   color: $white;
-//   font-weight: 600;
-//   border-bottom: 0.1875rem solid $white;
-// }
-// }
-// }
+&__logo {
+  max-width: 7.5rem;
+  max-height: 1.25rem;
+  padding-right: 1.8rem;
+}
+
+&__container {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4%;
+  color: $silver;
+}
+
+&__text{
+margin-right: 2rem;
+}
+
+&__text:hover {
+  color: $white;
+  font-weight: 600;
+  border-bottom: 0.1875rem solid $white;
+}
+  }
+}
+
+/* hero */
+
+@include breakpoints.large{
+.hero {
+  @include herobackground;
+    width: 100vw;
+    height:50vh;
+
+
+&__text {
+ font-size: 3.75rem;
+ font-weight: 700;
+ line-height: 4.25rem;
+  color: $white;
+  padding: 10vw;
+}}}
+

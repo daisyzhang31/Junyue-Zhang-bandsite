@@ -26,67 +26,170 @@
 /* media query for mobile */
 /* media query for tablet */
 /* media query for high pixel density devices */
-/* styles for header for mobile */
-/* haedbanner */
-.headbanner {
-  background-color: #323232;
-  text-align: center;
-  padding: 3% 0;
-}
-.headbanner__logo {
-  max-width: 7.5rem;
-  max-height: 1.25rem;
-}
-.headbanner__container {
-  display: flex;
-  justify-content: space-around;
-  color: white;
-  padding: 0 4%;
-}
-.headbanner__text {
-  color: #afafaf;
-}
-.headbanner__text:hover {
-  color: white;
-  font-weight: 600;
-  border-bottom: 0.1875rem solid white;
-}
-
-/* hero */
-.hero {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
-  background-position: center;
-  background-size: cover;
-  height: 30vh;
-}
-.hero__text {
-  font-size: 1.5rem;
-  color: white;
-  font-weight: 700;
-  padding: 1rem;
-}
-
-/* styles for header on tablet device */
 /* general mixin*/
 /* mobile */
 /* tablet&desktop */
+/* styles for header for mobile */
+/* headbanner */
+@media only screen and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .headbanner {
+    background-color: #323232;
+    padding: 3% 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .headbanner__logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+  }
+  .headbanner__container {
+    display: flex;
+    color: #afafaf;
+    width: 100%;
+  }
+  .headbanner__text {
+    width: 50%;
+    text-align: center;
+    padding-bottom: 0.5rem;
+  }
+  .headbanner__text:hover {
+    color: white;
+    font-weight: 600;
+    border-bottom: 0.1875rem solid white;
+  }
+}
+/* hero */
+@media only screen and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .hero {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 40vh;
+  }
+  .hero__text {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 700;
+    padding: 1rem;
+  }
+}
+/* styles for header on tablet device */
+/* headbanner */
+@media only screen and (min-width: 767px) {
+  .headbanner {
+    background-color: #323232;
+    display: flex;
+    padding: 1.3rem 2.25rem 0 2.25rem;
+  }
+  .headbanner__logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+    padding-right: 1.8rem;
+  }
+  .headbanner__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4%;
+    color: #afafaf;
+  }
+  .headbanner__text {
+    margin-right: 2rem;
+    padding-bottom: 1.3rem;
+  }
+  .headbanner__text:hover {
+    color: white;
+    font-weight: 600;
+    border-bottom: 0.1875rem solid white;
+  }
+}
+/* hero */
+@media only screen and (min-width: 767px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+  }
+  .hero__text {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+    color: white;
+    padding: 2.25rem;
+  }
+}
+/* styles for header on desktop */
+@media only screen and (min-width: 1280px) {
+  .headbanner {
+    background-color: #323232;
+    display: flex;
+    padding: 1.5rem 10vw 0 10vw;
+  }
+  .headbanner__logo {
+    max-width: 7.5rem;
+    max-height: 1.25rem;
+    padding-right: 1.8rem;
+  }
+  .headbanner__container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 4%;
+    color: #afafaf;
+  }
+  .headbanner__text {
+    margin-right: 2rem;
+  }
+  .headbanner__text:hover {
+    color: white;
+    font-weight: 600;
+    border-bottom: 0.1875rem solid white;
+  }
+}
+/* hero */
+@media only screen and (min-width: 1280px) {
+  .hero {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 50vh;
+  }
+  .hero__text {
+    font-size: 3.75rem;
+    font-weight: 700;
+    line-height: 4.25rem;
+    color: white;
+    padding: 10vw;
+  }
+}
 /* main component */
+/* styles for main for mobile */
 /* musician part*/
 .musician {
   padding: 0 1rem 0 1rem;
 }
 .musician__title {
   font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
   color: #323232;
   padding-top: 1.5rem;
   margin: 0 0;
 }
 .musician__picture {
-  padding: 1rem 0 1rem 0;
+  padding: 1rem 0 0 0;
   width: 100%;
-  height: 30vh;
+  height: 40vh;
 }
 .musician__text {
   font-size: 0.875rem;
@@ -94,11 +197,15 @@
   font-weight: 600;
   margin: 0 0;
 }
+.musician__text-name {
+  font-size: 0.8125rem;
+  line-height: 1.375rem;
+}
 .musician__subtitle {
   font-size: 0.875rem;
   line-height: 1.375rem;
   font-weight: 600;
-  font-weight: 500;
+  padding-top: 1rem;
 }
 .musician__subtext {
   font-size: 0.8125rem;
@@ -107,70 +214,227 @@
 }
 
 /* Photogallery */
-.photogallery {
-  background-color: #fafafa;
-  padding: 0 1rem;
+@media only screen and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .photogallery {
+    background-color: #fafafa;
+    padding: 0 1rem;
+  }
+  .photogallery__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .photogallery__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .photogallery__picture {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
 }
-.photogallery__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  padding-top: 1rem;
-  margin-bottom: 0.5rem;
+/* styles for main for tablet */
+/* musician part*/
+@media only screen and (min-width: 767px) {
+  .musician {
+    padding: 0 2.25rem;
+  }
+  .musician__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    color: #323232;
+    padding-top: 3rem;
+    margin: 0 0;
+  }
+  .musician__container {
+    padding: 0 8%;
+  }
+  .musician__picture {
+    padding: 2.25rem 0 0 0;
+    width: 100%;
+    height: 45vh;
+  }
+  .musician__text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 2rem;
+    margin: 0 0;
+    padding-top: 1rem;
+  }
+  .musician__text-name {
+    font-size: 1.1rem;
+    font-weight: 500;
+  }
+  .musician__subtitle {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 600;
+    padding-top: 2.25rem;
+    margin: 0 0;
+  }
+  .musician__subtitle-container {
+    display: flex;
+    font-size: 0.875rem;
+    line-height: 22px;
+    font-weight: 400;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+  }
+  .musician__subtext {
+    width: 46%;
+  }
 }
-.photogallery__container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+/* Photo gallery */
+@media only screen and (min-width: 767px) {
+  .photogallery {
+    background-color: #fafafa;
+    padding: 0 2.25rem;
+  }
+  .photogallery__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    padding-top: 3rem;
+    margin: 0 0;
+  }
+  .photogallery__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 2.25rem;
+  }
+  .photogallery__picture {
+    width: 32%;
+    height: auto;
+    padding-top: 2%;
+  }
 }
-.photogallery__picture {
-  height: 30vh;
-  margin-bottom: 1rem;
+/* styles for main for desktop */
+@media only screen and (min-width: 1280px) {
+  .musician {
+    padding: 0 10vw;
+  }
+  .photogallery {
+    padding: 0 10vw;
+  }
 }
-
 /* footer part */
-.footer {
-  background-color: #323232;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  color: white;
+/* styles for footer for mobile */
+@media only screen and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .footer {
+    background-color: #323232;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+  }
+  .footer__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .footer__social {
+    text-align: left;
+    width: 200px;
+  }
+  .footer__social-image {
+    padding-right: 14%;
+  }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .footer__contacts-infor-name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .footer__contacts-infor-detail {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .footer__end-text {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin: 0 0;
+  }
 }
-.footer__title {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  font-weight: 700;
-  margin-top: 0;
+/* styles for footer for tablet */
+@media only screen and (min-width: 767px) {
+  .footer {
+    background-color: #323232;
+    padding: 2.25rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+  }
+  .footer__social-container {
+    display: flex;
+    align-items: self-end;
+    margin-bottom: 1rem;
+  }
+  .footer__title {
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    font-weight: 700;
+    margin: 0 59px 0 0;
+  }
+  .footer__social {
+    width: 200px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .footer__social-image {
+    padding-right: 14%;
+  }
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+  }
+  .footer__contacts-infor-name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 600;
+  }
+  .footer__contacts-infor-detail {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+  }
+  .footer__end-image {
+    position: absolute;
+    bottom: 80%;
+    left: 82%;
+  }
+  .footer__end-text {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    margin: 0 0;
+  }
 }
-.footer__Social {
-  text-align: left;
+/* styles for footer for desktop */
+@media only screen and (min-width: 1280px) {
+  .footer {
+    padding: 2.25rem 10vw;
+  }
 }
-.footer__Social-image {
-  padding-right: 10%;
-}
-.footer__contacts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.footer__contacts-infor-name {
-  font-size: 0.875rem;
-  line-height: 1.375rem;
-  font-weight: 600;
-}
-.footer__contacts-infor-detail {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-.footer__end-text {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-  margin: 0 0;
-}
-
 html,
 body {
   margin: 0;

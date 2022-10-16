@@ -4,57 +4,163 @@
 
 /* main component */
 
+/* styles for main for mobile */
+
 /* musician part*/
 
 .musician {
   padding: 0 1rem 0 1rem;
 
   &__title {
-    font-size: 1.5rem;
+    @include sectionheader;
     color: $bandsite-black;
     padding-top: 1.5rem;
     margin: 0 0;
   }
 
   &__picture {
-    padding: 1rem 0 1rem 0;
+    padding: 1rem 0 0 0;
     width: 100%;
-    height: 30vh;
+    height: 40vh;
   }
 
   &__text {
-   @include subheader;
+    @include subheader;
     margin: 0 0;
+  }
+
+  &__text-name {
+    font-size: 0.8125rem;
+    line-height: 1.375rem;
   }
 
   &__subtitle {
     @include subheader;
-    font-weight: 500;
+    padding-top: 1rem;
   }
 
   &__subtext {
-   @include bodycopy
+    @include bodycopy;
   }
 }
 
 /* Photogallery */
 
-.photogallery {
-  background-color: $Alabaster;
-  padding: 0 1rem;
+@include breakpoint.small {
+  .photogallery {
+    background-color: $Alabaster;
+    padding: 0 1rem;
 
-  &__title {
-    @include sectionheader;
-    padding-top: 1rem;
-    margin-bottom: 0.5rem;
+    &__title {
+      @include sectionheader;
+      padding-top: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    &__container {
+      @include flexcolumn;
+    }
+
+    &__picture {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+/* styles for main for tablet */
+
+/* musician part*/
+
+@include breakpoint.medium {
+  .musician {
+    padding: 0 2.25rem;
+
+    &__title {
+      @include TDectionheader;
+      color: $bandsite-black;
+      padding-top: 3rem;
+      margin: 0 0;
+    }
+    &__container {
+      padding: 0 8%;
+    }
+
+    &__picture {
+      padding: 2.25rem 0 0 0;
+      width: 100%;
+      height: 45vh;
+    }
+
+    &__text {
+      font-size: 1.3rem;
+      font-weight: 600;
+      line-height: 2rem;
+      margin: 0 0;
+      padding-top: 1rem;
+    }
+
+    &__text-name {
+      font-size: 1.1rem;
+      font-weight: 500;
+    }
+
+    &__subtitle {
+      @include TDsubheader;
+      padding-top: 2.25rem;
+      margin: 0 0;
+    }
+
+    &__subtitle-container {
+      display: flex;
+      @include TDbodycopy;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+    }
+
+    &__subtext {
+      width: 46%;
+    }
+  }
+}
+
+/* Photo gallery */
+
+@include breakpoint.medium {
+  .photogallery {
+    background-color: $Alabaster;
+    padding: 0 2.25rem;
+
+    &__title {
+      @include TDectionheader;
+      padding-top: 3rem;
+      margin: 0 0;
+    }
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding-bottom: 2.25rem;
+    }
+
+    &__picture {
+      width: 32%;
+      height: auto;
+      padding-top: 2%;
+    }
+  }
+}
+
+/* styles for main for desktop */
+
+@include breakpoint.large {
+  .musician {
+    padding: 0 10vw;
   }
 
-  &__container {
-    @include flexcolumn;
-  }
-
-  &__picture {
-    height: 30vh;
-    margin-bottom: 1rem;
+  .photogallery{
+    padding: 0 10vw;
   }
 }

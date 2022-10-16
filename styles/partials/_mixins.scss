@@ -5,6 +5,18 @@
     flex-direction: column;
     justify-content: space-evenly;
 }
+@mixin herobackground {
+display: flex;
+  align-items: center;
+  background: linear-gradient(
+      to bottom,
+      rgba(50, 50, 50, 0.5),
+      rgba(50, 50, 50, 0.5)
+    ),
+    url(../../../Assets/Images/hero-bio.jpg);
+    background-position:center;
+    background-size: cover;
+}
 
 /* mobile */
 
@@ -34,7 +46,6 @@
     font-weight: 700;
 }
 
-
 @mixin TDsubheader {
     font-size: 1.5rem;
     line-height: 2rem;
@@ -51,4 +62,9 @@
     font-size: .875rem;
     line-height: 1.25rem;
     font-weight: 400; 
+}
+
+@mixin headbannnerstyle {
+    background-color: $bandsite-black;
+display: flex;
 }

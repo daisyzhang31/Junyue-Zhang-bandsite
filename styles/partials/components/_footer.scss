@@ -3,40 +3,109 @@
 @use "../mixins" as *;
 
 /* footer part */
+/* styles for footer for mobile */
 
-.footer {
-  background-color: $bandsite-black;
-  padding: 1rem;
-  @include flexcolumn;
-  color: $white;
-
-  &__title {
-    @include sectionheader;
-    margin-top: 0;
-  }
-
-  &__Social {
-    text-align: left;
-  }
-
-  &__Social-image {
-    padding-right: 10%;
-  }
-
-  &__contacts {
+@include bkp.small {
+  .footer {
+    background-color: $bandsite-black;
+    padding: 1rem;
     @include flexcolumn;
-  }
+    color: $white;
 
-  &__contacts-infor-name {
-    @include subheader;
-  }
+    &__title {
+      @include sectionheader;
+      margin-top: 0;
+    }
 
-  &__contacts-infor-detail {
-    @include bodycopy;
-  }
+    &__social {
+      text-align: left;
+      width: 200px;
+    }
 
-  &__end-text {
-    @include bodycopy;
-    margin: 0 0;
+    &__social-image {
+      padding-right: 14%;
+    }
+
+    &__contacts {
+      @include flexcolumn;
+    }
+
+    &__contacts-infor-name {
+      @include subheader;
+    }
+
+    &__contacts-infor-detail {
+      @include bodycopy;
+    }
+
+    &__end-text {
+      @include bodycopy;
+      margin: 0 0;
+    }
+  }
+}
+
+/* styles for footer for tablet */
+
+@include bkp.medium {
+  .footer {
+    background-color: $bandsite-black;
+    padding: 2.25rem;
+    color: $white;
+    @include flexcolumn;
+    position: relative;
+
+    &__social-container {
+      display: flex;
+      align-items: self-end;
+      margin-bottom: 1rem;
+    }
+
+    &__title {
+      @include TDectionheader;
+      margin: 0 59px 0 0;
+    }
+
+    &__social {
+      width: 200px;
+      height: fit-content;
+    }
+
+    &__social-image {
+      padding-right: 14%;
+    }
+
+    &__contacts {
+      display: flex;
+      justify-content: space-between;
+      width: 700px;
+    }
+
+    &__contacts-infor-name {
+      @include subheader;
+    }
+
+    &__contacts-infor-detail {
+      @include bodycopy;
+    }
+
+    &__end-image {
+      position: absolute;
+      bottom: 80%;
+      left: 82%;
+    }
+
+    &__end-text {
+      @include bodycopy;
+      margin: 0 0;
+    }
+  }
+}
+
+/* styles for footer for desktop */
+
+@include bkp.large {
+  .footer {
+    padding: 2.25rem 10vw;
   }
 }

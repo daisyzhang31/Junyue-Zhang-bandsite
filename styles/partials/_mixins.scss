@@ -29,13 +29,13 @@ display: flex;
 @mixin subheader {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 @mixin bodycopy {
      font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 400;
+    font-weight: 300;
 }
 
 /* tablet&desktop */

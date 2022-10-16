@@ -31,7 +31,8 @@
     }
 
     &__contacts-infor-name {
-      @include subheader;
+      @include bodycopy;
+      font-weight: 500;
     }
 
     &__contacts-infor-detail {

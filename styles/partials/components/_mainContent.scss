@@ -21,7 +21,7 @@
   &__picture {
     padding: 1rem 0 0 0;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
   }
 
   &__text {
@@ -32,11 +32,13 @@
   &__text-name {
     font-size: 0.8125rem;
     line-height: 1.375rem;
+    font-weight: 500;
+    margin-top: 0.3rem;
   }
 
   &__subtitle {
     @include subheader;
-    padding-top: 1rem;
+    padding-top: 0.5rem;
   }
 
   &__subtext {
@@ -90,7 +92,7 @@
     &__picture {
       padding: 2.25rem 0 0 0;
       width: 100%;
-      height: 45vh;
+      height: 50vh;
     }
 
     &__text {
@@ -104,6 +106,7 @@
     &__text-name {
       font-size: 1.1rem;
       font-weight: 500;
+      line-height: 2rem;
     }
 
     &__subtitle {
@@ -160,7 +163,12 @@
     padding: 0 10vw;
   }
 
-  .photogallery{
+  .musician__picture {
+    width: 100%;
+    height: 65vh;
+  }
+
+  .photogallery {
     padding: 0 10vw;
   }
 }

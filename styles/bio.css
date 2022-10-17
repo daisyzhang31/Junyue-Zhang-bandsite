@@ -67,7 +67,12 @@
   .hero {
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background: linear-gradient(
+        to bottom,
+        rgba(50, 50, 50, 0.5),
+        rgba(50, 50, 50, 0.5)
+      ),
+      url(../Assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -115,7 +120,12 @@
   .hero {
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background: linear-gradient(
+        to bottom,
+        rgba(50, 50, 50, 0.5),
+        rgba(50, 50, 50, 0.5)
+      ),
+      url(../Assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -140,7 +150,12 @@
   .hero {
     display: flex;
     align-items: center;
-    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../../Assets/Images/hero-bio.jpg);
+    background: linear-gradient(
+        to bottom,
+        rgba(50, 50, 50, 0.5),
+        rgba(50, 50, 50, 0.5)
+      ),
+      url(../Assets/Images/hero-bio.jpg);
     background-position: center;
     background-size: cover;
     width: 100vw;
@@ -434,4 +449,4 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
-}/*# sourceMappingURL=bio.css.map */
+} /*# sourceMappingURL=bio.css.map */

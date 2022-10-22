@@ -47,9 +47,11 @@
   .headbanner__container {
     display: flex;
     width: 100%;
+    padding: 0.5rem 0;
   }
   .headbanner__text {
-    font-size: 0.9375rem;
+    font-family: "Avenir";
+    font-size: 0.8125rem;
     font-weight: 400;
     text-decoration: none;
     width: 50%;
@@ -73,18 +75,13 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 34vh;
+    height: 35vh;
   }
   .hero__text {
     font-size: 1.5rem;
-    color: white;
-    font-weight: 700;
-    padding: 1rem;
-  }
-  .hero__heading {
-    font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+    color: white;
     padding: 1rem;
   }
 }
@@ -98,12 +95,17 @@
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 58vh;
+    height: 55vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
   }
   .showshero__text {
     color: white;
+    font-size: 0.875rem;
     font-weight: 400;
-    padding: 0 1rem;
+    padding: 1rem 0 0 1rem;
     margin: 0 0;
   }
   .showshero__heading {
@@ -111,12 +113,14 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    font-size: 2rem;
-    padding: 1rem;
+    padding: 1rem 0 0 1rem;
     margin: 0 0;
+    width: 80%;
   }
   .showshero__music {
     margin-left: 1rem;
+    width: 290px;
+    height: 105px;
   }
 }
 /* styles for header on tablet device */
@@ -138,6 +142,7 @@
     padding: 0 4%;
   }
   .headbanner__text {
+    font-size: 0.875rem;
     text-decoration: none;
     margin-right: 2rem;
     padding-bottom: 1.3rem;
@@ -168,7 +173,43 @@
     padding: 2.25rem;
   }
 }
+/* shows hero */
+@media only screen and (min-width: 767px) {
+  .showshero {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(50, 50, 50, 0.5), rgba(50, 50, 50, 0.5)), url(../../Assets/Images/hero-shows.jpg);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 79vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  .showshero__text {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1.5rem 2.25rem 0 2.25rem;
+    margin: 0 0;
+  }
+  .showshero__heading {
+    color: white;
+    font-size: 58px;
+    padding: 0.6rem 2.25rem;
+    margin: 0 0;
+    width: 75%;
+  }
+  .showshero__music {
+    margin-left: 2.25rem;
+    width: 420px;
+    height: 140px;
+  }
+}
 /* styles for header on desktop */
+/*headbanner*/
 @media only screen and (min-width: 1280px) {
   .headbanner {
     padding: 1.5rem 10vw 0 10vw;
@@ -187,6 +228,32 @@
   }
   .hero__text {
     padding: 10vw;
+  }
+}
+/* shows hero*/
+@media only screen and (min-width: 1280px) {
+  .showshero {
+    padding: 0 10vw;
+    height: 70vh;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+  }
+  .showshero__container {
+    width: 59%;
+  }
+  .showshero__music {
+    width: 470px;
+    margin-top: 2.5rem;
+  }
+  .showshero__text {
+    padding: 0 0;
+  }
+  .showshero__heading {
+    padding: 1rem 0rem;
+    margin: 0 0;
+    width: 82%;
   }
 }
 /* main component */
@@ -368,7 +435,7 @@
   }
   .footer__social {
     text-align: left;
-    width: 200px;
+    width: 12.5rem;
   }
   .footer__social-image {
     padding-right: 14%;
@@ -377,6 +444,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    padding-bottom: 2rem;
   }
   .footer__contacts-infor-name {
     font-size: 0.8125rem;
@@ -419,7 +487,7 @@
     margin: 0 59px 0 0;
   }
   .footer__social {
-    width: 200px;
+    width: 12.5rem;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
@@ -430,7 +498,8 @@
   .footer__contacts {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 43.75rem;
+    padding-bottom: 1.2rem;
   }
   .footer__contacts-infor-name {
     font-size: 0.875rem;
@@ -460,11 +529,353 @@
     padding: 2.25rem 10vw;
   }
 }
+/* styles for comment for mobile */
+/*  comment form */
+@media only screen and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .commentform {
+    padding: 1rem 1rem 0 1rem;
+  }
+  .commentform__head {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0.9375rem;
+  }
+  .commentform__container {
+    display: flex;
+    justify-content: normal;
+    border-bottom: 1px solid #E1E1E1;
+  }
+  .commentform__picture {
+    background-image: url(../Assets/Images/Mohan-muruge.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+  }
+  .commentform__name {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .commentform__name--text {
+    font-size: 0.625rem;
+    color: #afafaf;
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+  .commentform__comment {
+    display: flex;
+    flex-direction: column;
+  }
+  .commentform__comment--text {
+    font-size: 0.75rem;
+    color: #afafaf;
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+  .commentform__button {
+    font-size: 1rem;
+    font-family: "Avenir";
+    width: 100%;
+    height: 40px;
+    color: white;
+    background-color: #323232;
+    margin: 1rem 0;
+    border-radius: 4px;
+    border: transparent;
+  }
+  .commentform__button:hover {
+    background-color: #000000;
+  }
+  .commentform .commentformone {
+    width: 90%;
+  }
+  .commentform input {
+    background: #fafafa;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    min-height: 2.25rem;
+    padding: 12px;
+  }
+  .commentform input::-moz-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform input:-ms-input-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform input::placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea {
+    background: #fafafa;
+    width: 100%;
+    height: 5.625rem;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    padding: 12px;
+  }
+  .commentform textarea::-moz-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea:-ms-input-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea::placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  /* comment part  for mobile */
+}
+@media only screen and (max-width: 767px) and (max-width: 767px) {
+  /* placeholder for css properties that needs to be applied for this media query */
+  .comments {
+    padding: 0 1rem 1rem 1rem;
+  }
+  .comments__detail {
+    display: flex;
+    justify-content: normal;
+    border-bottom: 1px solid #E1E1E1;
+    padding-top: 1rem;
+  }
+  .comments__picture {
+    background-color: #E1E1E1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-right: 1rem;
+  }
+  .comments__text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .comments__text--container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .comments__text--name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+  }
+  .comments__text--time {
+    color: #afafaf;
+    font-size: 14px;
+  }
+  .comments__text--content {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 300;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+  }
+}
+/* comment content  for tablet */
+/*  comment form */
+@media only screen and (min-width: 767px) {
+  .commentform {
+    padding: 3rem 0 0 0;
+  }
+  .commentform__head {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 2.25rem;
+  }
+  .commentform__container {
+    display: flex;
+    justify-content: normal;
+    border-bottom: 1px solid #E1E1E1;
+    margin: 0 9%;
+  }
+  .commentform__picture {
+    background-image: url(../Assets/Images/Mohan-muruge.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-top: 1.5rem;
+    margin-right: 1rem;
+  }
+  .commentform__name {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+  }
+  .commentform__name--text {
+    font-size: 0.625rem;
+    color: #afafaf;
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+  .commentform__comment {
+    display: flex;
+    flex-direction: column;
+  }
+  .commentform__comment--text {
+    font-size: 0.75rem;
+    color: #afafaf;
+    font-weight: 400;
+    padding-bottom: 4px;
+  }
+  .commentform__button {
+    font-size: 1rem;
+    font-family: "Avenir";
+    min-width: 150px;
+    height: 40px;
+    color: white;
+    background-color: #323232;
+    margin: 1.2rem 0;
+    border-radius: 4px;
+    border: transparent;
+  }
+  .commentform__button:hover {
+    background-color: #000000;
+  }
+  .commentform .buttonright {
+    text-align: right;
+  }
+  .commentform .commentformone {
+    width: 90%;
+  }
+  .commentform input {
+    background: #fafafa;
+    border: 1px solid #E1E1E1;
+    border-radius: 4px;
+    min-height: 3rem;
+    padding: 16px;
+  }
+  .commentform input::-moz-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform input:-ms-input-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform input::placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea {
+    background: #fafafa;
+    width: 100%;
+    height: 90px;
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    padding: 16px;
+  }
+  .commentform textarea::-moz-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea:-ms-input-placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  .commentform textarea::placeholder {
+    color: #323232;
+    font-family: "Avenir";
+  }
+  /* comment part */
+}
+@media only screen and (min-width: 767px) and (min-width: 767px) {
+  .comments {
+    padding: 0 9% 2.25rem 9%;
+  }
+  .comments__detail {
+    display: flex;
+    justify-content: normal;
+    border-bottom: 1px solid #E1E1E1;
+    padding-top: 1rem;
+  }
+  .comments__picture {
+    background-color: #E1E1E1;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    width: 30%;
+    height: auto;
+    max-width: 2.25rem;
+    max-height: 2.25rem;
+    margin-right: 1rem;
+  }
+  .comments__text {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+  }
+  .comments__text--container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .comments__text--name {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-weight: 500;
+  }
+  .comments__text--time {
+    color: #afafaf;
+    font-size: 14px;
+  }
+  .comments__text--content {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 300;
+    font-size: 0.875rem;
+    padding: 1rem 0;
+  }
+}
+/* comment content  for tablet */
+/*  comment form */
+@media only screen and (min-width: 1280px) {
+  .commentform__head {
+    padding-left: 10vw;
+  }
+  .commentform__container {
+    justify-content: normal;
+    margin: 0 23vw;
+    padding: 2.25rem 0 0 0;
+  }
+  .commentform__picture {
+    margin-right: 1.2rem;
+  }
+  .comments {
+    padding: 0 23vw 2.25rem 23vw;
+  }
+  .comments__detail {
+    justify-content: normal;
+  }
+  .comments__picture {
+    margin-right: 1.2rem;
+  }
+}
 html,
 body {
   margin: 0;
   font-family: "Avenir";
-  line-height: 1.8rem;
   height: 100vh;
   box-sizing: border-box;
 }

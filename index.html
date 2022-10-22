@@ -132,12 +132,54 @@
         </div>
       </section>
 
-<!-- comment content -->
-<section class="commentform"></section>
+      <!-- comment content -->
 
-<section class="comments">
+      <!-- comment form -->
 
-<!-- <div class="comments__detail">
+      <section class="commentform">
+        <h1 class="commentform__head">Join the Conversation</h1>
+
+        <div class="commentform__container">
+          <div class="commentform__picture"></div>
+
+          <form class="commentformone" id="commentform">
+            <div class="commentform__content">
+              <div class="commentform__name">
+                <label class="commentform__name--text" for="name">NAME</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="formname"
+                  placeholder="Enter your name"
+                />
+              </div>
+
+              <div class="commentform__comment">
+                <label class="commentform__comment--text" for="comment"
+                  >COMMENT</label
+                >
+                <textarea
+                  name="comment"
+                  id="comment"
+                  cols="30"
+                  rows="10"
+                  placeholder="Add a new comment"
+                ></textarea>
+              </div>
+              <div class="buttonright">
+                <button class="commentform__button" type="submit">
+                  COMMENT
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!-- comment text -->
+
+      <section class="comments">
+        <!-- <div class="comments__detail">
 <div class="comments__picture"></div>
 <article class="comments__text">
   <div class="comments__text-container" 
@@ -150,7 +192,6 @@
 </div>
 
 
-
 <div class="commentdetail">
 
 </div>
@@ -158,10 +199,7 @@
 <div class="commentdetail">
 
 </div> -->
-
-</section>
-
-
+      </section>
     </main>
 
     <!-- footer content -->
@@ -170,21 +208,26 @@
       <div class="footer__social-container">
         <h1 class="footer__title">Get in Touch</h1>
         <div class="footer__social">
-          <img
-            class="footer__social-image"
-            src="./Assets/Icons/SVG/Icon-instagram.svg"
-            alt=""
-          />
-          <img
-            class="footer__social-image"
-            src="./Assets/Icons/SVG/Icon-facebook.svg"
-            alt=""
-          />
-          <img
-            class="footer__social-image"
-            src="./Assets/Icons/SVG/Icon-twitter.svg"
-            alt=""
-          />
+          <a href="https://www.instagram.com/">
+            <img
+              class="footer__social-image"
+              src="./Assets/Icons/SVG/Icon-instagram.svg"
+              alt=""
+            />
+          </a>
+          <a href="https://www.facebook.com/">
+            <img
+              class="footer__social-image"
+              src="./Assets/Icons/SVG/Icon-facebook.svg"
+              alt=""
+          /></a>
+          <a href="https://www.twitter.com/">
+            <img
+              class="footer__social-image"
+              src="./Assets/Icons/SVG/Icon-twitter.svg"
+              alt=""
+            />
+          </a>
         </div>
       </div>
 
@@ -227,20 +270,20 @@
           </p>
         </div>
       </div>
-      <br />
 
       <div class="footer__end">
-        <img
-          class="footer__end-image"
-          src="./Assets/Logo/Logo-bandsite.svg"
-          alt=""
-        />
+        <a href="./index.html"
+          ><img
+            class="footer__end-image"
+            src="./Assets/Logo/Logo-bandsite.svg"
+            alt=""
+        /></a>
         <p class="footer__end-text">
           Copyright The Bees Knees © 2021 All Rights Reserved
         </p>
       </div>
     </footer>
 
-  <script src="./scripts/index-page.js"></script>
+    <script src="./scripts/index-page.js"></script>
   </body>
 </html>

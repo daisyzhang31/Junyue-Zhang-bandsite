@@ -1,14 +1,8 @@
+// create DOM tree
 
 const showsparent = document.querySelector(".shows");
 
-const heading = document.createElement("h1");
-heading.classList.add("shows__header");
-heading.innerText = "Shows";
-showsparent.appendChild(heading);
-
-const showsinfor = document.createElement("section");
-showsinfor.classList.add("shows__inforcontainer");
-showsparent.appendChild(showsinfor);
+const showsinfor = document.querySelector(".shows__inforcontainer");
 
 let arr = [
   {
@@ -44,9 +38,8 @@ let arr = [
 ];
 
 arr.forEach((element) => {
-
-  const div0 =document.createElement("div");
-  div0.classList.add("shows__inforwarp")
+  const div0 = document.createElement("div");
+  div0.classList.add("shows__inforwarp");
 
   const div1 = document.createElement("div");
   div1.classList.add("shows__infor");
@@ -82,12 +75,12 @@ arr.forEach((element) => {
   span6.classList.add("shows__infor--content");
   span6.innerText = element.location;
 
+  const link = document.createElement("a");
+  link.classList.add("shows__buttonlink");
+
   const button1 = document.createElement("button");
   button1.classList.add("shows__button");
   button1.innerText = "Buy Tickets";
-
-  // const divider = document.createElement("hr");
-  // divider.classList.add("shows__divider");
 
   div1.appendChild(span1);
   div1.appendChild(span2);
@@ -95,25 +88,26 @@ arr.forEach((element) => {
   div2.appendChild(span4);
   div3.appendChild(span5);
   div3.appendChild(span6);
-div0.appendChild(div1);
-div0.appendChild(div2);
-div0.appendChild(div3);
-div0.appendChild(button1);
-// div0.appendChild(divider);
-showsinfor.appendChild(div0);
+  div0.appendChild(div1);
+  div0.appendChild(div2);
+  div0.appendChild(div3);
+  div0.appendChild(link);
+  link.appendChild(button1);
+  showsinfor.appendChild(div0);
 });
 
-const visible1 = document
-  .querySelector(".shows__infor--date-name")
-  .classList.add("shows__infor--name-visible1");
+// change the row backgroud color when selected
 
- const visible2 = document
-   .querySelector(".shows__infor--venue-name")
-   .classList.add("shows__infor--name-visible2"); 
-
- const visible3 = document
-   .querySelector(".shows__infor--locataio-name")
-   .classList.add("shows__infor--name-visible3"); 
-
-
-
+const showsrow = document.querySelectorAll(".shows__inforwarp");
+showsrow.forEach((row) =>
+  row.addEventListener("click", (event) => {
+    event.preventDefault();
+    event.currentTarget.style.backgroundColor = "#E1E1E1";
+    const allRows = document.querySelectorAll(".shows__inforwarp");
+    allRows.forEach((row) => {
+      if (row !== event.currentTarget) {
+        row.style.backgroundColor = "#FFFFFF";
+      }
+    });
+  })
+);

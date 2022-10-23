@@ -59,6 +59,12 @@
     padding-bottom: 0.5rem;
     color: #afafaf;
   }
+  .headbanner .textbio {
+    border-bottom: 0.1875rem solid white;
+  }
+  .headbanner .textshow {
+    border-bottom: 0.1875rem solid white;
+  }
   .headbanner__text:hover {
     color: white;
     font-weight: 600;
@@ -147,6 +153,12 @@
     margin-right: 2rem;
     padding-bottom: 1.3rem;
     color: #afafaf;
+  }
+  .headbanner .textbio {
+    border-bottom: 0.1875rem solid white;
+  }
+  .headbanner .textshow {
+    border-bottom: 0.1875rem solid white;
   }
   .headbanner__text:hover {
     color: white;
@@ -617,6 +629,10 @@
     color: #323232;
     font-family: "Avenir";
   }
+  .commentform input:focus {
+    outline: none !important;
+    border-color: #323232;
+  }
   .commentform textarea {
     background: #fafafa;
     width: 100%;
@@ -636,6 +652,10 @@
   .commentform textarea::placeholder {
     color: #323232;
     font-family: "Avenir";
+  }
+  .commentform textarea:focus {
+    outline: none !important;
+    border-color: #323232;
   }
   /* comment part  for mobile */
 }
@@ -767,6 +787,10 @@
     min-height: 3rem;
     padding: 16px;
   }
+  .commentform input:focus {
+    outline: none !important;
+    border-color: #323232;
+  }
   .commentform input::-moz-placeholder {
     color: #323232;
     font-family: "Avenir";
@@ -798,6 +822,10 @@
   .commentform textarea::placeholder {
     color: #323232;
     font-family: "Avenir";
+  }
+  .commentform textarea:focus {
+    outline: none !important;
+    border-color: #323232;
   }
   /* comment part */
 }
@@ -848,7 +876,7 @@
     padding: 1rem 0;
   }
 }
-/* comment content  for tablet */
+/* comment content  for desktop */
 /*  comment form */
 @media only screen and (min-width: 1280px) {
   .commentform__head {

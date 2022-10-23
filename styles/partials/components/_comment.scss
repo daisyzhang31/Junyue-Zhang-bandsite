@@ -84,9 +84,13 @@
     }
 
     input::placeholder {
-      // padding-left: 12px;
       color: $bandsite-black;
       font-family: "Avenir";
+    }
+
+    input:focus{
+       outline: none !important;
+      border-color: $bandsite-black;
     }
 
     textarea {
@@ -101,6 +105,13 @@
       color: $bandsite-black;
       font-family: "Avenir";
     }
+
+    textarea:focus{
+      outline: none !important;
+      border-color: $bandsite-black;
+    }
+
+
   }
 
   /* comment part  for mobile */
@@ -244,6 +255,11 @@
       padding: 16px;
     }
 
+    input:focus{
+      outline: none !important;
+      border-color: $bandsite-black;
+    }
+
     input::placeholder {
       color: $bandsite-black;
       font-family: "Avenir";
@@ -260,6 +276,11 @@
     textarea::placeholder { 
       color: $bandsite-black;
       font-family: "Avenir";
+    }
+
+    textarea:focus{
+      outline: none !important;
+      border-color: $bandsite-black;
     }
   }
 
@@ -315,7 +336,7 @@
       }
     }}}}
 
-    /* comment content  for tablet */
+    /* comment content  for desktop */
 
 /*  comment form */
 

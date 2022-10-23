@@ -59,6 +59,12 @@
     padding-bottom: 0.5rem;
     color: #afafaf;
   }
+  .headbanner .textbio {
+    border-bottom: 0.1875rem solid white;
+  }
+  .headbanner .textshow {
+    border-bottom: 0.1875rem solid white;
+  }
   .headbanner__text:hover {
     color: white;
     font-weight: 600;
@@ -147,6 +153,12 @@
     margin-right: 2rem;
     padding-bottom: 1.3rem;
     color: #afafaf;
+  }
+  .headbanner .textbio {
+    border-bottom: 0.1875rem solid white;
+  }
+  .headbanner .textshow {
+    border-bottom: 0.1875rem solid white;
   }
   .headbanner__text:hover {
     color: white;
@@ -397,9 +409,16 @@ body {
     color: #323232;
     padding-bottom: 1rem;
   }
+  .shows__subheadcontainer {
+    visibility: hidden;
+    height: 0;
+  }
   .shows__inforwarp {
     border-bottom: 1px solid #E1E1E1;
     margin-bottom: 1rem;
+  }
+  .shows__inforwarp:hover {
+    background-color: #fafafa;
   }
   .shows__infor {
     display: flex;
@@ -419,7 +438,7 @@ body {
     padding-bottom: 4px;
   }
   .shows .one {
-    font-weight: 600;
+    font-weight: 500;
   }
   .shows__button {
     font-size: 1rem;
@@ -443,9 +462,12 @@ body {
   }
   .shows__inforwarp {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: start;
     align-items: center;
     border-bottom: 1px solid #E1E1E1;
+  }
+  .shows__inforwarp:hover {
+    background-color: #fafafa;
   }
   .shows__header {
     font-size: 1.5rem;
@@ -454,37 +476,43 @@ body {
     color: #323232;
     padding-bottom: 1rem;
   }
+  .shows__subheadcontainer {
+    display: flex;
+    justify-content: start;
+  }
+  .shows__subheadcontainer-text {
+    color: #afafaf;
+    font-size: 0.75rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+    width: 26%;
+  }
   .shows__infor {
     display: flex;
     flex-direction: column;
-    width: 25%;
+    width: 26%;
   }
   .shows__infor--content {
     font-size: 0.9375rem;
     font-weight: 400;
-    padding-bottom: 1rem;
+    padding: 1rem 0;
   }
   .shows .shows__infor--date-name,
 .shows .shows__infor--venue-name,
 .shows .shows__infor--locataio-name {
     visibility: hidden;
-  }
-  .shows .shows__infor--name-visible1,
-.shows .shows__infor--name-visible2,
-.shows .shows__infor--name-visible3 {
-    visibility: visible;
-    color: #afafaf;
-    font-size: 0.9375rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
+    height: 0;
   }
   .shows .one {
-    font-weight: 600;
+    font-weight: 500;
+  }
+  .shows__buttonlink {
+    width: 22%;
   }
   .shows__button {
     font-size: 1rem;
     font-family: "Avenir";
-    width: 22%;
+    width: 100%;
     height: 40px;
     color: white;
     background-color: #323232;
@@ -502,14 +530,14 @@ body {
   .shows__inforcontainer {
     width: 80%;
   }
+  .shows__subheadcontainer {
+    margin: 1rem 0;
+  }
   .shows__header {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
     color: #323232;
     margin: 0 0;
-  }
-  .shows__inforwarp {
-    margin-top: 1rem;
   }
 }/*# sourceMappingURL=show.css.map */

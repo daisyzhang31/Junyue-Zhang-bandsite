@@ -36,6 +36,14 @@
       color: $silver;
     }
 
+    .textbio {
+      border-bottom: 0.1875rem solid $white;
+    }
+
+    .textshow {
+      border-bottom: 0.1875rem solid $white;
+    }
+
     &__text:hover {
       color: $white;
       font-weight: 600;
@@ -53,7 +61,7 @@
     height: 35vh;
 
     &__text {
-       @include sectionheader;
+      @include sectionheader;
       color: $white;
       padding: 1rem;
     }
@@ -123,6 +131,14 @@
       margin-right: 2rem;
       padding-bottom: 1.3rem;
       color: $silver;
+    }
+
+    .textbio {
+      border-bottom: 0.1875rem solid $white;
+    }
+
+    .textshow {
+      border-bottom: 0.1875rem solid $white;
     }
 
     &__text:hover {

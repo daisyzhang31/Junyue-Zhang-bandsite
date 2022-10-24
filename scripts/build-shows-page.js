@@ -98,16 +98,18 @@ arr.forEach((element) => {
 
 // change the row backgroud color when selected
 
-const showsrow = document.querySelectorAll(".shows__inforwarp");
-showsrow.forEach((row) =>
-  row.addEventListener("click", (event) => {
+const showsRows= document.querySelectorAll(".shows__inforwarp");
+
+showsRows.forEach((element) => {
+  element.addEventListener("click", (event) => {
     event.preventDefault();
-    event.currentTarget.style.backgroundColor = "#E1E1E1";
-    const allRows = document.querySelectorAll(".shows__inforwarp");
-    allRows.forEach((row) => {
-      if (row !== event.currentTarget) {
-        row.style.backgroundColor = "#FFFFFF";
-      }
-    });
-  })
-);
+    event.currentTarget.classList.toggle("shows__wrapactive");
+showsRows.forEach((row) => {
+if (row !== event.currentTarget){
+  row.classList.remove("shows__wrapactive");}
+}
+)
+  });
+});
+
+

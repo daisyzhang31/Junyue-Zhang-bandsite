@@ -417,8 +417,11 @@ body {
     border-bottom: 1px solid #E1E1E1;
     margin-bottom: 1rem;
   }
-  .shows__inforwarp:hover {
+  .shows__inforwarp:not(.shows__wrapactive):hover {
     background-color: #fafafa;
+  }
+  .shows__wrapactive {
+    background-color: #E1E1E1;
   }
   .shows__infor {
     display: flex;
@@ -466,8 +469,11 @@ body {
     align-items: center;
     border-bottom: 1px solid #E1E1E1;
   }
-  .shows__inforwarp:hover {
+  .shows__inforwarp:not(.shows__wrapactive):hover {
     background-color: #fafafa;
+  }
+  .shows__wrapactive {
+    background-color: #E1E1E1;
   }
   .shows__header {
     font-size: 1.5rem;

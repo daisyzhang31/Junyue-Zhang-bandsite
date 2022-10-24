@@ -68,7 +68,8 @@ const commentform = document.getElementById("commentform");
 commentform.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  // border color change based status
+  // border color change based on status
+
   if (isInputValid(event) == false) {
     return;
   }
@@ -96,12 +97,12 @@ function isInputValid(event) {
   const isInputNameEmpty = inputName === "";
   const isInputCommentEmpty = inputText === "";
   if (isInputNameEmpty) {
-    event.target.formname.style.border = "1px solid red";
+    event.target.formname.style.border = "1px solid #D22D2D";
   } else {
     event.target.formname.style.border = "1px solid #E1E1E1";
   }
   if (isInputCommentEmpty) {
-    event.target.comment.style.border = "1px solid red";
+    event.target.comment.style.border = "1px solid #D22D2D";
   } else {
     event.target.comment.style.border = "1px solid #E1E1E1";
   }

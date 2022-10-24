@@ -39,10 +39,12 @@ body {
       margin-bottom: 1rem;
     }
 
-    &__inforwarp:hover {
+    &__inforwarp:not(.shows__wrapactive):hover {
       background-color: $Alabaster;
     }
-
+    &__wrapactive {
+      background-color: $Mercury;
+    }
     &__infor {
       display: flex;
       flex-direction: column;
@@ -98,8 +100,12 @@ body {
       border-bottom: 1px solid $Mercury;
     }
 
-    &__inforwarp:hover {
+    &__inforwarp:not(.shows__wrapactive):hover {
       background-color: $Alabaster;
+    }
+
+    &__wrapactive {
+      background-color: $Mercury;
     }
 
     &__header {

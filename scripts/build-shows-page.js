@@ -4,40 +4,7 @@ const showsparent = document.querySelector(".shows");
 
 const showsinfor = document.querySelector(".shows__inforcontainer");
 
-let arr = [
-  {
-    date: "Mon Sept 06 2021",
-    venue: "Ronald Lane ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Tue Sept 21 2021",
-    venue: "Pier 3 East ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Oct 15 2021",
-    venue: "View Lounge ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Sat Nov 06 2021 ",
-    venue: "Hyatt Agency ",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Fri Nov 26 2021",
-    venue: " Moscow Center",
-    location: "San Francisco, CA",
-  },
-  {
-    date: "Wed Dec 15 2021",
-    venue: "Press Club",
-    location: "San Francisco, CA",
-  },
-];
-
-arr.forEach((element) => {
+function dispalyShows(showsDetail) {
   const div0 = document.createElement("div");
   div0.classList.add("shows__inforwarp");
 
@@ -51,7 +18,7 @@ arr.forEach((element) => {
   const span2 = document.createElement("span");
   span2.classList.add("shows__infor--content");
   span2.classList.add("one");
-  span2.innerText = element.date;
+  span2.innerText = new Date(showsDetail.date).toDateString("en-US");
 
   const div2 = document.createElement("div");
   div2.classList.add("shows__infor");
@@ -62,7 +29,7 @@ arr.forEach((element) => {
 
   const span4 = document.createElement("span");
   span4.classList.add("shows__infor--content");
-  span4.innerText = element.venue;
+  span4.innerText = showsDetail.place;
 
   const div3 = document.createElement("div");
   div3.classList.add("shows__infor");
@@ -73,7 +40,7 @@ arr.forEach((element) => {
 
   const span6 = document.createElement("span");
   span6.classList.add("shows__infor--content");
-  span6.innerText = element.location;
+  span6.innerText = showsDetail.location;
 
   const link = document.createElement("a");
   link.classList.add("shows__buttonlink");
@@ -94,22 +61,41 @@ arr.forEach((element) => {
   div0.appendChild(link);
   link.appendChild(button1);
   showsinfor.appendChild(div0);
-});
-
-// change the row backgroud color when selected
-
-const showsRows= document.querySelectorAll(".shows__inforwarp");
-
-showsRows.forEach((element) => {
-  element.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.currentTarget.classList.toggle("shows__wrapactive");
-showsRows.forEach((row) => {
-if (row !== event.currentTarget){
-  row.classList.remove("shows__wrapactive");}
 }
-)
-  });
-});
+
+// get show information from API
+
+const getShowDate = () => {
+  axios.get(
+    "https://project-1-api.herokuapp.com/showdates?api_key=996ddd18-2180-45a8-96fd-4bb39d607563"
+  )
+    .then((result) => {
+      showsInfo = result.data;
+      showsInfo.forEach((showsDetail) => {
+        dispalyShows(showsDetail);
+      });
+      
+      // change the row backgroud color when selected
+
+      const showsRows = document.querySelectorAll(".shows__inforwarp");
+
+      showsRows.forEach((element) => {
+        element.addEventListener("click", (event) => {
+          event.preventDefault();
+          event.currentTarget.classList.toggle("shows__wrapactive");
+          showsRows.forEach((row) => {
+            if (row !== event.currentTarget) {
+              row.classList.remove("shows__wrapactive");
+            }
+          });
+        });
+      });
+    })
+    .catch((error) => console.log(error));
+}
+
+getShowDate();
+
+
 
 

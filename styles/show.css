@@ -47,7 +47,7 @@
   .headbanner__container {
     display: flex;
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0 0;
   }
   .headbanner__text {
     font-family: "Avenir";
@@ -302,18 +302,18 @@
   .footer__contacts-infor-name {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     font-weight: 500;
   }
   .footer__contacts-infor-detail {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   .footer__end-text {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0;
   }
 }
@@ -357,12 +357,12 @@
   .footer__contacts-infor-name {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .footer__contacts-infor-detail {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   .footer__end-image {
     position: absolute;
@@ -372,7 +372,7 @@
   .footer__end-text {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0;
   }
 }
@@ -441,7 +441,7 @@ body {
     padding-bottom: 4px;
   }
   .shows .one {
-    font-weight: 500;
+    font-weight: 600;
   }
   .shows__button {
     font-size: 1rem;
@@ -510,7 +510,7 @@ body {
     height: 0;
   }
   .shows .one {
-    font-weight: 500;
+    font-weight: 600;
   }
   .shows__buttonlink {
     width: 22%;

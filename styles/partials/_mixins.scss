@@ -31,9 +31,9 @@
   background-size: cover;
 }
 
-@mixin commenticon{
+@mixin commenticon {
   background-image: url(../Assets/Images/Mohan-muruge.jpg);
-    background-position: center;
+  background-position: center;
   background-size: cover;
   border-radius: 50%;
 }
@@ -49,13 +49,13 @@
 @mixin subheader {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 @mixin bodycopy {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* tablet&desktop */

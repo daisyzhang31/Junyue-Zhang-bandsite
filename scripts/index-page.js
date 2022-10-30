@@ -1,26 +1,4 @@
-
 // create the DOM
-
-const arr = [
-  {
-    name: "Miles Acosta",
-    date: "12/20/2020",
-    content:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-  {
-    name: "Emilie Beach",
-    date: "01/09/2021",
-    content:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Connor Walton",
-    date: "02/17/2021",
-    content:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-];
 
 function displayComment(comment) {
   const parent = document.querySelector(".comments");
@@ -42,11 +20,30 @@ function displayComment(comment) {
 
   const span2 = document.createElement("span");
   span2.classList.add("comments__text--time");
-  span2.innerText = comment.date;
+  timeString = new Date(comment.timestamp).toLocaleDateString("en-US");
+  span2.innerText = timeString;
 
   const span3 = document.createElement("span");
   span3.classList.add("comments__text--content");
-  span3.innerText = comment.content;
+  span3.innerText = comment.comment;
+
+  const div4 = document.createElement("div");
+  div4.classList.add("comments__like-container");
+
+  const span4 = document.createElement("span");
+  span4.classList.add("comments__like");
+
+  const span5 = document.createElement("span");
+  span5.classList.add("comments__like-number");
+  span5.innerText = comment.likes;
+
+  span4.addEventListener("click", () => {
+    const putUrl =`https://project-1-api.herokuapp.com/comments/${comment.id}/like?api_key=08831e75-1640-469e-9269-f4d00eb4136b`
+    axios.put(putUrl).then(res => {
+    span5.innerText = res.data.likes
+    });
+    }
+  )
 
   div1.appendChild(div2);
   div1.appendChild(art);
@@ -54,44 +51,67 @@ function displayComment(comment) {
   div3.appendChild(span1);
   div3.appendChild(span2);
   art.appendChild(span3);
+  art.appendChild(div4);
+  div4.appendChild(span4);
+  div4.appendChild(span5);
   parent.prepend(div1);
 }
 
-for (let i = 0; i < arr.length; i++) {
-  displayComment(arr[i]);
+// get default comments from AXIOS and display them
+
+function getAndDisplayComments() {
+  axios
+    .get(
+      "https://project-1-api.herokuapp.com/comments/?api_key=08831e75-1640-469e-9269-f4d00eb4136b"
+    )
+    .then((result) => {
+      comments = result.data;
+      newComments = comments.sort((a, b) => a.timestamp - b.timestamp);
+      console.log(newComments);
+      newComments.forEach((comment) => {
+        displayComment(comment);
+      });
+    })
+    .catch((error) => console.log(error));
 }
 
-// add event to form
+getAndDisplayComments();
 
-const commentform = document.getElementById("commentform");
 
-commentform.addEventListener("submit", (event) => {
+
+/* add event to form */
+
+const commentForm = document.getElementById("commentform");
+
+commentForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
   // border color change based on status
 
-  if (isInputValid(event) == false) {
+  isValid = isInputValid(event);
+
+  if (isValid === false) {
     return;
   }
 
-  // create new comment
+  // create new comment and post new comments to API
+
   const newComment = createComment(event);
-  arr.push(newComment);
 
-// clear all comments
-  clearComments();
+  addNewComment(newComment);
 
-//  render all comments again
-  renderComments();
+  // clear the text remain in the form
 
-// clear the text remain in the form
-  clearText(event.target);
+  event.target.reset();
 });
 
 
-// the functions' defination
 
-function isInputValid(event) {
+/* function definations */
+
+// border color change based on status
+
+const isInputValid = (event) => {
   const inputName = event.target.formname.value;
   const inputText = event.target.comment.value;
   const isInputNameEmpty = inputName === "";
@@ -110,35 +130,31 @@ function isInputValid(event) {
     return false;
   }
   return true;
-}
+};
 
-function createComment(event) {
-  const inputname = event.target.formname.value;
-  const inputtext = event.target.comment.value;
+// create new comment and post new comments to API
+
+const createComment = (event) => {
+  const inputName = event.target.formname.value;
+  const inputText = event.target.comment.value;
   const Comment = {
-    name: inputname,
-    date: new Date(Date.now()).toLocaleDateString("en-US"),
-    content: inputtext,
+    name: inputName,
+    comment: inputText,
   };
   return Comment;
-}
+};
 
-function clearComments() {
-  const commentsDiv = document.querySelector(".comments");
-  while (commentsDiv.firstChild) {
-    commentsDiv.removeChild(commentsDiv.lastChild);
-  }
-}
-
-function renderComments() {
-  // displayComment(comment)
-  // arr.forEach(comment => displayComment(comment))
-  for (i = 0; i < arr.length; i++) {
-    displayComment(arr[i]);
-  }
-}
-
-function clearText(target) {
-  target.formname.value = "";
-  target.comment.value = "";
-}
+const addNewComment = (newComment) => {
+  axios
+    .post(
+      "https://project-1-api.herokuapp.com/comments?api_key=08831e75-1640-469e-9269-f4d00eb4136b",
+      newComment
+    )
+    .then((response) => {
+      addedComment = response.data;
+      displayComment(addedComment);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+};

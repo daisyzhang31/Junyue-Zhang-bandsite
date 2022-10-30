@@ -47,7 +47,7 @@
   .headbanner__container {
     display: flex;
     width: 100%;
-    padding: 0.5rem 0;
+    padding: 0.5rem 0 0 0;
   }
   .headbanner__text {
     font-family: "Avenir";
@@ -290,25 +290,25 @@
 .musician__text {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 500;
+  font-weight: 600;
   margin: 0 0;
 }
 .musician__text-name {
   font-size: 0.8125rem;
   line-height: 1.375rem;
-  font-weight: 500;
+  font-weight: 400;
   margin-top: 0.3rem;
 }
 .musician__subtitle {
   font-size: 0.875rem;
   line-height: 1.375rem;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 0.5rem;
 }
 .musician__subtext {
   font-size: 0.8125rem;
   line-height: 1.125rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 /* Photogallery */
@@ -367,7 +367,7 @@
   }
   .musician__text-name {
     font-size: 1.1rem;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 2rem;
   }
   .musician__subtitle {
@@ -461,18 +461,18 @@
   .footer__contacts-infor-name {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     font-weight: 500;
   }
   .footer__contacts-infor-detail {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   .footer__end-text {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0;
   }
 }
@@ -516,12 +516,12 @@
   .footer__contacts-infor-name {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .footer__contacts-infor-detail {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
   }
   .footer__end-image {
     position: absolute;
@@ -531,7 +531,7 @@
   .footer__end-text {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 0 0;
   }
 }
@@ -681,6 +681,22 @@
     max-height: 2.25rem;
     margin-right: 1rem;
   }
+  .comments__like-container {
+    display: flex;
+    position: relative;
+    left: 84%;
+    margin-bottom: 1rem;
+    height: 1rem;
+    width: 5%;
+  }
+  .comments__like {
+    background-image: url(../../../Assets/Icons/SVG/icon-like.svg);
+    background-size: cover;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
   .comments__text {
     width: 90%;
     display: flex;
@@ -693,7 +709,7 @@
   .comments__text--name {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .comments__text--time {
     color: #afafaf;
@@ -702,9 +718,9 @@
   .comments__text--content {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.875rem;
-    padding: 1rem 0;
+    padding-top: 1rem;
   }
 }
 /* comment content  for tablet */
@@ -720,6 +736,7 @@
     margin-top: 0;
     margin-bottom: 0;
     padding-left: 2.25rem;
+    padding-bottom: 2.25rem;
   }
   .commentform__container {
     display: flex;
@@ -850,6 +867,22 @@
     max-height: 2.25rem;
     margin-right: 1rem;
   }
+  .comments__like-container {
+    display: flex;
+    position: relative;
+    left: 84%;
+    margin-bottom: 1rem;
+    height: 1rem;
+    width: 5%;
+  }
+  .comments__like {
+    background-image: url(../../../Assets/Icons/SVG/icon-like.svg);
+    background-size: cover;
+    background-size: auto;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
   .comments__text {
     width: 90%;
     display: flex;
@@ -862,7 +895,7 @@
   .comments__text--name {
     font-size: 0.875rem;
     line-height: 1.375rem;
-    font-weight: 500;
+    font-weight: 600;
   }
   .comments__text--time {
     color: #afafaf;
@@ -871,7 +904,7 @@
   .comments__text--content {
     font-size: 0.8125rem;
     line-height: 1.125rem;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 0.875rem;
     padding: 1rem 0;
   }
